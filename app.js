@@ -24,7 +24,7 @@ io.on('connection', function (socket) {
     console.log("connected");
     socket.on('text', function (data) {
         let result = sentiment.analyze(data.text);
-        console.log("Text:\n" + data.text + "\nStyle:\n" + result);
+        console.log("Text: " + data.text + " Score: " + result.score);
         socket.emit("textStyle", {
             text: data.text,
             mark: result
