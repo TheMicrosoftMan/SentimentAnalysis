@@ -18,7 +18,7 @@ function toTextarea(e) {
 
 socket.on("textStyle", function (data) {
     startText.remove();
-    let st = (data.mark.score == 0) ? "😐" : ((data.mark.score > 0) ? "😄" : "😔");
+    let st = (data.mark.score == 0) ? "😐" : ((data.mark.score > 0) ? "🙂" : "😔");
     let li = document.createElement("li");
     let resultItem = document.createElement('div');
     resultItem.className = "result";
